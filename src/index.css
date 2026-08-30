@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   GLOBAL BASE STYLES
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  @apply bg-bg text-text font-body antialiased overflow-x-hidden;
+  cursor: none; /* replaced by <CustomCursor /> on non-touch devices */
+}
+
+/* Touch devices get the native cursor back — no mouse to track, and the
+   custom cursor would just sit uselessly in the corner. */
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+::selection {
+  @apply bg-violet text-white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   REUSABLE COMPONENT CLASSES
+   Small, composed utility classes so JSX doesn't drown in Tailwind soup for
+   repeated patterns (section padding, eyebrow labels, etc).
+   ========================================================================== */
+.section-tag {
+  @apply inline-block font-mono text-[0.8rem] tracking-[0.08em] text-cyan mb-3;
+}
+
+.section-title {
+  @apply font-display font-semibold text-[clamp(2rem,4vw,2.75rem)] tracking-tight;
+}
+
+.text-gradient {
+  @apply bg-gradient-accent bg-clip-text text-transparent;
+}
+
+.glass-panel {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08];
+}
+
+/* Custom scrollbar to match the moody theme (WebKit browsers) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #08080c;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6, #22d3ee);
+  border-radius: 999px;
+}
