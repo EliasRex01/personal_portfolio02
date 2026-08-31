@@ -11,9 +11,9 @@ const SKILLS = [
 ];
 
 const STATS = [
-  { value: 5, suffix: '+', label: 'Years Experience' },
-  { value: 40, suffix: '+', label: 'Projects Shipped' },
-  { value: 12, suffix: '+', label: 'Happy Clients' },
+  { value: 7, suffix: '+', label: 'Years Experience' },
+  { value: 31, suffix: '+', label: 'Projects Shipped' },
+  { value: 70, suffix: '+', label: 'Happy Clients' },
 ];
 
 /** Animated count-up number, starts once it scrolls into view. */
