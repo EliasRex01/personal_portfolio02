@@ -1,3 +1,6 @@
+# netlify deploy:
+https://agent-6a94d494b662aa50--chipper-rabanadas-d44c69.netlify.app
+
 # Elias Oviedo — 3D Portfolio (React + Tailwind + GSAP + Framer Motion)
 
 A premium, cinematic, dark-mode portfolio site with a built-in rule-based
